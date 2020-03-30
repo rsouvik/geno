@@ -14,7 +14,7 @@ use wasm_bindgen::prelude::*;
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
-pub mod geno {
+//pub mod geno {
 
     #[wasm_bindgen]
     pub fn add(id1: i32, id2: i32, id3: i32) {
@@ -23,7 +23,7 @@ pub mod geno {
 
     pub fn randnum() { rand::random::<i32>(); }
 
-}
+//}
 
 
 
