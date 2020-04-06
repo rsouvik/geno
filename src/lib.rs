@@ -21,7 +21,10 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
         id1 + id2 + id3;
     }
 
+    #[wasm_bindgen]
     pub fn randnum() { rand::random::<i32>(); }
+
+    #[wasm_bindgen]
     pub fn hel() { print!(" Hello")}
 
 //}
