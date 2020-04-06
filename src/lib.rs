@@ -22,6 +22,7 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
     }
 
     pub fn randnum() { rand::random::<i32>(); }
+    pub fn hel() { print!(" Hello")}
 
 //}
 
