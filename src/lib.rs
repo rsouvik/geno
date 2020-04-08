@@ -16,19 +16,25 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 //pub mod geno {
 
-    #[wasm_bindgen]
-    pub fn add(id1: i32, id2: i32, id3: i32) {
-        id1 + id2 + id3;
-    }
+#[wasm_bindgen]
+extern "C" {
+    fn alert(s: &str);
+}
 
-    #[wasm_bindgen]
-    pub fn randnum() { rand::random::<i32>(); }
+#[wasm_bindgen]
+pub fn add(id1: i32, id2: i32, id3: i32) {
+    id1 + id2 + id3;
+}
 
-    #[wasm_bindgen]
-    pub fn hel() { print!(" Hello")}
+#[wasm_bindgen]
+pub fn randnum() {
+    rand::random::<i32>();
+}
+
+#[wasm_bindgen]
+pub fn hel() {
+    //print!(" Hello");
+    alert(" Hello");
+}
 
 //}
-
-
-
-
